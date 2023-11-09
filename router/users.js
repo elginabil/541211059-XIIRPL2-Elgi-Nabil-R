@@ -1,9 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const usercontroller = require('../controllers/user')
+const usercontroller = require('../controllers/users')
 
-
+//endpoint, function, perintah
 router.get('/users', usercontroller.index)
+
+router.get('/users/:id', usercontroller.show)
 
   router.post('/user', usercontroller.store)
 
